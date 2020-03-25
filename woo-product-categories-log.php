@@ -5,14 +5,14 @@
  */
 ?>
 <?php
-add_action( 'wp_enqueue_scripts', 'changjili_product_categories_css' );
-function changjili_product_categories_css() {
-    wp_register_style( 'changjili_product_categories_css', plugins_url( 'css/style.css', __FILE__ ) );
-    wp_enqueue_style( 'changjili_product_categories_css' );
+add_action( 'wp_enqueue_scripts', 'woo_product_categories_css' );
+function woo_product_categories_css() {
+    wp_register_style( 'woo_product_categories_css', plugins_url( 'css/style.css', __FILE__ ) );
+    wp_enqueue_style( 'woo_product_categories_css' );
 }
  
-add_action( 'woocommerce_before_shop_loop', 'changjili_product_subcategories', 50 );
-function changjili_product_subcategories( $args = array() ) {
+add_action( 'woocommerce_before_shop_loop', 'woo_product_subcategories', 50 );
+function woo_product_subcategories( $args = array() ) {
 	global $wp;
 	$woocommerce_category_id = get_terms('product_type');
 	echo '<div class="section section-filters">';
