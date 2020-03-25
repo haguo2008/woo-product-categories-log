@@ -1,0 +1,2 @@
+# woo-product-categories-log
+ 
